@@ -1,0 +1,51 @@
+* {
+    margin: 5px;
+    padding: 5px;
+}
+
+body {
+    background-color: bisque;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#title1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.verschieben {
+    margin-left: 35px;
+}
+
+.parseBackground {
+    background-color: rgb(10, 236, 217)
+}
+
+.greenBackground {
+    background-color: rgb(10, 236, 59)
+}
+
+.redBackground {
+    background-color: rgb(238, 130, 42)
+}
+
+#slider1 {
+    width: 296px;
+}
+
+#divEingabe {
+    background-color: rgb(228, 145, 235);
+    max-width: 802px;
+}
+
+textarea {
+    height: 800px;
+    width: 800px;
+    font-size: 15px;
+}

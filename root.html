@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>vCard to readable V1.0</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/root.css">
+    <script src="js/root.js"></script>
+</head>
+
+<body>
+<h1 id="title1">vCard reader V1.0 (file.vcf)</h1>
+<div id="divEingabe">
+    <input type="button" id="start_button1" class="parseBackground" value="Parse">
+
+    <input type="button" id="speichern_button1" class="greenBackground" value="Save">
+    <input type="button" id="holen_button1" class="greenBackground" value="Get">
+
+    <span class="verschieben">.vcf:</span>
+    <input type="file" id="file1" name="File">
+    <br>
+    <span style="vertical-align : 3px; font-size: 15px">ANSI-Import:</span>
+    <input type="checkbox" id="checkbox1">
+    <span style="vertical-align : 10px; margin-left: 83px">Font-Size:</span>
+    <input type="range" id="slider1" min="1" max="100" value="15">
+</div>
+<textarea wrap="off" id="textarea1"
+          placeholder="'Drag and Drop from PC'  or  'Select a file above'  or  'Paste from clipboard (ctrl + v)'"></textarea>
+<textarea wrap="off" id="textarea2" placeholder="copy for using('ctrl + a' and 'ctrl + c') to clipboard"></textarea>
+</body>
+</html>

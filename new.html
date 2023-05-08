@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>vCard to readable v2.0</title>
+    <meta charset="utf-8">
+    <style>
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th, td{
+            padding: 5px;
+        }
+
+        table input{
+            width: 100%;
+            border: none;
+        }
+        tr:hover{
+            background: #d4d2d2;
+        }
+        tr:hover input{
+            background: #d4d2d2;
+        }
+    </style>
+    <script src="js/vue.js"></script>
+    <script src="js/html-excel.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="file" id="file" name="File" v-on:change="fileSelect">
+    <button type="button" v-on:click="parseContent()">Load</button>
+    <button type="button" onclick="HTE.export('content', 'cards')">Excel</button>
+    <br/>
+    <br/>
+    <div id="content">
+        <table style="border-spacing: 0; border-collapse: collapse;font-size:9.0pt;" border="1">
+            <tr>
+                <th>Name</th>
+                <th>Tel cell</th>
+                <th>Tel home</th>
+            </tr>
+            <tr v-for="(card, index) in cards" :key="index" @keyup.ctrl.delete="del(index)">
+                <td>
+                    <input v-model="card.FN" class="export-hidden">
+                    <span v-text="card.FN" hidden></span>
+                </td>
+                <td>
+                    <input v-model="card.TELCELL" class="export-hidden">
+                    <span v-text="card.TELCELL" hidden></span>
+                </td>
+                <td>
+                    <input v-model="card.TELHOME" class="export-hidden">
+                    <span v-text="card.TELHOME" hidden></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="js/new.js"></script>
+</body>
+</html>
